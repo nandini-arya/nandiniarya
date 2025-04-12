@@ -58,7 +58,42 @@
       <a href="https://www.skype.com/nandiniarya" target="_blank" rel="noopener noreferrer"><i class="bi bi-skype"></i></a>
       <a href="https://www.linkedin.com/in/nandiniarya" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
+    <!-- Play/Pause Button -->
+<button onclick="toggleMusic()" id="music-btn" style="
+background: linear-gradient(135deg, #00b4db, #0083b0);
+color: white;
+border: none;
+padding: 12px 24px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 30px;
+cursor: pointer;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease;
+">
+Play Music 🎵
+</button>
 
+<!-- Audio Element -->
+<audio id="bg-music" autoplay loop>
+<source src="assets/img/Icon/bg.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Script -->
+<script>
+const music = document.getElementById('bg-music');
+const button = document.getElementById('music-btn');
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    button.textContent = 'Pause Music ⏸️';
+  } else {
+    music.pause();
+    button.textContent = 'Play Music 🎵';
+  }
+}
+</script>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
